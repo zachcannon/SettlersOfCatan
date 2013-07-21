@@ -7,14 +7,19 @@ using SettlersOfCatan.Models;
 
 namespace SettlersOfCatan.Controllers
 {
-    public class StartGameController : Controller
+    public class RollDieController : Controller
     {
-        
+
         public ActionResult DieRollPage()
         {
-            Die dieToRoll = new Die();
-            dieToRoll.rollDie();
-            return View(dieToRoll);
+            return View();
+        }
+
+        public string GetDieRoll()
+        {
+            Die die = new Die();
+            die.rollDie();
+            return ("The last roll was a " + die.dieValue);
         }
 
     }

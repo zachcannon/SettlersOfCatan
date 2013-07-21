@@ -1,0 +1,15 @@
+﻿@model SettlersOfCatan.Models.Die
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<h2>Die Roll Page</h2>
+
+@Ajax.ActionLink("Roll the die", "GetDieRoll", new AjaxOptions()
+                               {UpdateTargetId = "lastRoll"})
+
+<div id ="lastRoll"></div>
+
+
+
