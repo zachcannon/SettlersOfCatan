@@ -7,22 +7,10 @@ namespace SettlersOfCatan.Models
 {
     public class Player
     {
-        public Player()
-        {
-            brickResource = 0;
-            sheepResource = 0;
-            stoneResource = 0;
-            wheatResource = 0;
-            woodResource = 0;
-            victoryPoints = 0;
-        }
-
-        public int brickResource { get; set; }
-        public int sheepResource { get; set; }
-        public int stoneResource { get; set; }
-        public int wheatResource { get; set; }
-        public int woodResource { get; set; }
-
-        public int victoryPoints { get; set; }
+        public int BrickResource { get; set; }
+        public int SheepResource { get; set; }
+        public int StoneResource { get; set; }
+        public int WheatResource { get; set; }
+        public int WoodResource { get; set; }
     }
 }

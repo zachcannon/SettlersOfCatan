@@ -1,5 +1,44 @@
-﻿<script src="~/Scripts/jquery-1.7.1.min.js"></script>
-<script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+﻿<!DOCTYPE html>
 
-<h2>Game Page</h2>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Instance</title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+        <link rel="stylesheet" href="~/Content/Site.css" />
+        
+<!--
+        <script>        
+            $(function () {
+                var appendType = function (i, value) {
+                    $("#container").append(i+ " " +value + " " )
+                };
+
+                var initializeBoard = function (data) {
+                    $.each(data.Tiles, appendType);
+                };
+
+                $.ajax({
+                    url: "/Game/CreateBoard"
+                }).done(initializeBoard);
+
+            });
+        </script>
+-->
+
+    </head>
+
+    <body>     
+        
+        <div class="sheep"></div>
+        <div class="brick"></div>
+        <div class="wood"></div>
+        <div class="ore"></div>
+        <div class="desert"></div>
+        <div class="wheat"></div>
+           
+    </body>
+</html>

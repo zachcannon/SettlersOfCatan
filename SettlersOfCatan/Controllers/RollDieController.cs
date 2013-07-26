@@ -19,7 +19,7 @@ namespace SettlersOfCatan.Controllers
         {
             Die die = new Die();
             die.rollDie();
-            return ("The last roll was a " + die.dieValue);
+            return ("The last roll was a " + die.DieValue);
         }
 
     }
