@@ -64,195 +64,47 @@ textarea {
 
 /*----------------Settlers_Board_Pieces------------------*/
 
-.sheep:before {
-    float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #82f96d;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
+ul, ol, li, img {
+    list-style: none outside none;
 }
 
-.sheep {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #82f96d;
+img.tile-scale {
+ 	width: 150px;
+ 	height: 150px;
+ }
+
+#board {
+    width: 850px;
+    height: 660px;
+    background-color: maroon;
+}
+
+#board li {
+    height: 18.75%;
     position: relative;
-    margin-left: 3px;
 }
 
-.sheep:after {
-    float: left;
-    content: "";
-    width: 0;
+#board li ol {
     position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #82f96d;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
 }
 
-.wheat:before {
-    float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #e8f606;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
+#board li ol.three-row {
+    left: 13%;
 }
 
-.wheat {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #e8f606;
-    position: relative;
-    margin-left: 3px;
+#board li ol.four-row {
+    left: 3.5%;
 }
 
-.wheat:after {
-    float: left;
-    content: "";
-    width: 0;
-    position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #e8f606;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
+#board li ol.five-row {
+    left: -6%;
 }
 
-.ore:before {
+#board li ol li {
     float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #3b3c3b;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
+    padding: 6px;
 }
 
-.ore {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #3b3c3b;
-    position: relative;
-    margin-left: 3px;
-}
 
-.ore:after {
-    float: left;
-    content: "";
-    width: 0;
-    position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #3b3c3b;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
 
-.brick:before {
-    float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #e52c10;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
-}
-
-.brick {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #e52c10;
-    position: relative;
-    margin-left: 3px;
-}
-
-.brick:after {
-    float: left;
-    content: "";
-    width: 0;
-    position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #e52c10;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
-
-.wood:before {
-    float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #0c740f;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
-}
-
-.wood {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #0c740f;
-    position: relative;
-    margin-left: 3px;
-}
-
-.wood:after {
-    float: left;
-    content: "";
-    width: 0;
-    position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #0c740f;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
-
-.desert:before {
-    float: left;
-    content: " ";
-    width: 0; height: 0;
-    border-bottom: 30px solid #4f6319;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-    position: absolute;
-    top: -30px;
-}
-
-.desert {
-    float: left;
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
-    background-color: #4f6319;
-    position: relative;
-    margin-left: 3px;
-}
-
-.desert:after {
-    float: left;
-    content: "";
-    width: 0;
-    position: absolute;
-    bottom: -30px;
-    border-top: 30px solid #4f6319;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
 
