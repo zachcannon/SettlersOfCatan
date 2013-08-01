@@ -2,76 +2,74 @@
 
 <html>
 
-    <head>
-        <meta name="viewport" content="width=device-width" />
+<head>
+    <meta name="viewport" content="width=device-width" />
 
-        <title>Instance</title>
+    <title>Settlers Of Catan!</title> 
+    <link rel="stylesheet" href="~/Content/Site.css" />        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.3.min.js"></script>
+    <script src="~/Scripts/instance.js"></script>
+</head>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-        <link rel="stylesheet" href="~/Content/Site.css" />
-        
-<!--
-        <script>        
-            $(function () {
-                var appendType = function (i, value) {
-                    $("#container").append(i+ " " +value + " " )
-                };
+<body>            
+    <ul id="board">
+        <li>
+            <ul class="three-row">
+                <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Sheep-Tile.png" class="tile-scale"/></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="four-row">
+                <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="five-row">
+                <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="four-row">
+                <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="three-row">
+                <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
+                <li><img src="~/Content/Images/Sheep-Tile.png" class="tile-scale"/></li>
+            </ul>
+        </li>
+    </ul>
 
-                var initializeBoard = function (data) {
-                    $.each(data.Tiles, appendType);
-                };
+    <ul id="player-info">
+        <li>            
+            <div id="player-one" class="player-box player-odd">I am player one!</div>
+        </li>
+        <li>            
+            <div id="player-two" class="player-box player-even">I am player two!</div>
+        </li>
+        <li>            
+            <div id="player-three" class="player-box player-odd">I am player three!</div>
+        </li>
+        <li>            
+            <div id="player-four" class="player-box player-even">I am player four!</div>
+        </li>
+    </ul>
 
-                $.ajax({
-                    url: "/Game/CreateBoard"
-                }).done(initializeBoard);
+</body>
 
-            });
-        </script>
--->
-
-    </head>
-
-    <body>            
-        <ol id="board">
-            <li>
-                <ol class="three-row">
-                    <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Sheep-Tile.png" class="tile-scale"/></li>
-                </ol>
-            </li>
-            <li>
-                <ol class="four-row">
-                    <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
-                </ol>
-            </li>
-            <li>
-                <ol class="five-row">
-                    <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
-                </ol>
-            </li>
-            <li>
-                <ol class="four-row">
-                    <li><img src="~/Content/Images/Desert-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Ore-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Brick-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
-                </ol>
-            </li>
-            <li>
-                <ol class="three-row">
-                    <li><img src="~/Content/Images/Wheat-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Wood-Tile.png" class="tile-scale"/></li>
-                    <li><img src="~/Content/Images/Sheep-Tile.png" class="tile-scale"/></li>
-                </ol>
-            </li>
-        </ol>
-    </body>
 </html>
