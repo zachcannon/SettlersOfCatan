@@ -7,31 +7,31 @@ namespace SettlersOfCatan.Models
 {
     public class Board
     {
-        public List<String> ResourceTiles { get; private set; }
+        public List<String> TerrainTiles { get; private set; }
         public List<int> NumberTokens { get; private set; }
 
         public Board()
         {
-            ResourceTiles = GenerateResourceTiles();
+            TerrainTiles = GenerateTerrainTiles();
             NumberTokens = GenerateNumberTokens();
         }
 
-        private List<String> GenerateResourceTiles()
+        private List<String> GenerateTerrainTiles()
         {
-            List<String> resourceTiles = new List<String>();
+            List<String> terrainTiles = new List<String>();
             for (int i = 0; i < 19; i++)
             {
                 Random random = new Random(i);
                 int value = random.Next(1,7);
-                if (value == 1) resourceTiles.Add("Wheat");
-                else if (value == 2) resourceTiles.Add("Sheep");
-                else if (value == 3) resourceTiles.Add("Wood");
-                else if (value == 4) resourceTiles.Add("Ore");
-                else if (value == 5) resourceTiles.Add("Brick");
-                else if (value == 6) resourceTiles.Add("Desert");
+                if (value == 1) terrainTiles.Add("Wheat");
+                else if (value == 2) terrainTiles.Add("Sheep");
+                else if (value == 3) terrainTiles.Add("Wood");
+                else if (value == 4) terrainTiles.Add("Ore");
+                else if (value == 5) terrainTiles.Add("Brick");
+                else if (value == 6) terrainTiles.Add("Desert");
             }
 
-            return resourceTiles;
+            return terrainTiles;
         }
 
 
