@@ -7,7 +7,6 @@ namespace SettlersOfCatan.Models
 {
     public class Board
     {
-
         public List<String> ResourceTiles { get; private set; }
         public List<int> RollValueTiles { get; private set; }
 

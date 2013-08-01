@@ -3,7 +3,9 @@
 $(document).ready(function () {
     $(function () {
         var appendType = function (i, value) {
-            $("#data-container").append(i + " " + value + " ")
+            var spaceNum = "#space-" + i;
+            var imgLocation = '<img src="/Content/Images/' + value + '-Tile.png" class="board-tile"/>';
+            $(spaceNum).append(imgLocation);
         };
 
         var initializeBoard = function (data) {
@@ -16,6 +18,5 @@ $(document).ready(function () {
 
     });
 
-    $('#space-0').prepend('<img src="Desert-Tile.png" />')
 });
 
