@@ -18,7 +18,7 @@ namespace SettlersOfCatan.Controllers
         public string GetDieRoll()
         {
             Die die = new Die();
-            die.rollDie();
+            die.RollDie();
             return ("The last roll was a " + die.DieValue);
         }
 
