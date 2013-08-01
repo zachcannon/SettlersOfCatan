@@ -7,9 +7,9 @@ namespace SettlersOfCatan.Models
 {
     public class Die
     {
-        public int DieValue { get; set; }
+        public int DieValue { get; private set; }
 
-        public void RollDie()
+        public void Roll()
         {
             Random random = new Random();
             this.DieValue = random.Next(1, 7);

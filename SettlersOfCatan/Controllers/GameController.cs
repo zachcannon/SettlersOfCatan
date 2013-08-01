@@ -14,7 +14,7 @@ namespace SettlersOfCatan.Controllers
             return View();
         }
 
-        public ActionResult CreateAndGetBoard()
+        public ActionResult CreateBoard()
         {
             Board board = new Board();
             return Json(board.TerrainTiles, JsonRequestBehavior.AllowGet);
