@@ -14,10 +14,10 @@ namespace SettlersOfCatan.Controllers
             return View();
         }
 
-        public ActionResult CreateBoard()
+        public ActionResult CreateAndGetBoard()
         {
             Board board = new Board();
-            return Json(board, JsonRequestBehavior.AllowGet);
+            return Json(board.ResourceTiles, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Instance()

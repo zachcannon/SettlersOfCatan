@@ -68,7 +68,7 @@ ul, ol, li, img {
     list-style: none outside none;
 }
 
-img.tile-scale {
+.board-tile {
  	width: 150px;
  	height: 150px;
  }
@@ -135,6 +135,10 @@ img.tile-scale {
 
 .player-even {
     float: right;
+}
+
+#data-container {
+    float: left;
 }
 
 
