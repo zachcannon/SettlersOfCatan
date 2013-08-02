@@ -13,7 +13,7 @@ $(document).ready(function () {
         };
 
         $.ajax({
-            url: "/Game/CreateAndGetBoard"
+            url: "/Game/CreateBoard"
         }).done(initializeBoard);
 
     });
