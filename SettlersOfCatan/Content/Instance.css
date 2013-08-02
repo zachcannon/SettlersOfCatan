@@ -73,6 +73,16 @@ ul, ol, li, img {
  	height: 150px;
  }
 
+.board-tile img {
+    position: absolute;
+
+}
+
+.space-number-token {
+    margin-left: 55px;
+    margin-top: 55px;
+}
+
 #board {
     width: 840px;
     height: 660px;

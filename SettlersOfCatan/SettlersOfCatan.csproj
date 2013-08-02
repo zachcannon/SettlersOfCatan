@@ -146,6 +146,7 @@
   <ItemGroup>
     <Content Include="Content\Images\Brick-Tile.png" />
     <Content Include="Content\Images\Desert-Tile.png" />
+    <Content Include="Content\Images\Num-Tile-Placeholder.png" />
     <Content Include="Content\Images\Ore-Tile.png" />
     <Content Include="Content\Images\Sheep-Tile.png" />
     <Content Include="Content\Images\Water-Tile.png" />
