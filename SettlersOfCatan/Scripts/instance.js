@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         var appendNumberTokens = function (i, value) {
             var spaceNum = "#space-" + i;
-            $(spaceNum).append('<img src="/Content/Images/Num-Tile-Placeholder.png" class="space-number-token"/>');
+            if (value != 0) $(spaceNum).append('<img src="/Content/Images/Num-Tile-Placeholder.png" class="space-number-token"/>');
         }
 
         var initializeBoard = function (data) {
