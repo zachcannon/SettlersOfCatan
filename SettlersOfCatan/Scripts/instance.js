@@ -3,17 +3,17 @@
 $(document).ready(function () {
     $(function () {
         var appendTerrain = function (i, value) {
-            $('.board-tile:eq(' + i + ')').addClass(value.toLowerCase() + '-terrain');
+            $('.board-tile:eq(' + i + ')').addClass(value.TerrainType.toLowerCase() + '-terrain');
         };
 
         var appendNumberToken = function (i, value) {           
-            if (value != 0) $('.board-tile:eq(' + i + ')').html('<img src="/Content/Images/Number-Token-' + value + '.png" class="number-token"/>');
+            if (value.HasNumberToken) $('.board-tile:eq(' + i + ')').html('<img src="/Content/Images/Number-Token-' + value.NumberTokenValue + '.png" class="number-token"/>');
             
         }
 
         var initializeBoard = function (data) {
             $.each(data.TerrainTiles, appendTerrain);
-            $.each(data.NumberTokens, appendNumberToken);
+            $.each(data.TerrainTiles, appendNumberToken);
         };
 
         $.ajax({

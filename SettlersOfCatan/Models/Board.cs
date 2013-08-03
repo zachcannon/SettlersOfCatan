@@ -17,16 +17,24 @@ namespace SettlersOfCatan.Models
             Sheep
         };
 
-        public List<String> TerrainTiles { get; private set; }
-        public List<int> NumberTokens { get; private set; }
+        public int DesertLocation { get; set; }
+
+        public List<Tile> TerrainTiles { get; private set; }
 
         public Board()
         {
-            TerrainTiles = GenerateTerrainTiles();
-            NumberTokens = GenerateNumberTokens();
+            List<String> TerrainTileTypes = GenerateTerrainTileTypes();
+            FindDesertLocation(TerrainTileTypes);
+            List<int> NumberTokenTiles = GenerateNumberTokens(TerrainTileTypes);
+            TerrainTiles = GenerateBoard(TerrainTileTypes, NumberTokenTiles);
         }
 
-        private List<String> GenerateTerrainTiles()
+        private void FindDesertLocation(List<String> terrainTileTypes)
+        {
+            DesertLocation = terrainTileTypes.IndexOf("Desert");
+        }
+
+        private List<String> GenerateTerrainTileTypes()
         {
             IEnumerable<Terrains> terrainTiles = new List<Terrains>
             {
@@ -58,11 +66,30 @@ namespace SettlersOfCatan.Models
         }
 
 
-        private List<int> GenerateNumberTokens()
+        private List<int> GenerateNumberTokens(List<String> terrainTileTypes)
         {
-            List<int> numberTokens = new List<int> { 5, 2, 6, 10, 9, 4, 3, 8, 11, 5, 8, 4, 3, 6, 10, 11, 12, 9};
-            numberTokens.Insert(TerrainTiles.IndexOf("Desert"), 0);
-            return numberTokens;
+            List<int> numberTokenTiles = new List<int> { 5, 2, 6, 10, 9, 4, 3, 8, 11, 5, 8, 4, 3, 6, 10, 11, 12, 9};
+            numberTokenTiles.Insert(DesertLocation, 0);
+            return numberTokenTiles;
+        }
+
+        private List<Tile> GenerateBoard(List<String> terrainTileTypes, List<int> numberTokenTiles)
+        {
+            List<Tile> TerrainTiles = new List<Tile>();
+
+            for (int i = 0; i < terrainTileTypes.Count(); i++)
+            {
+                Tile tile;
+                if(i == DesertLocation) {
+                    tile = new Tile(terrainTileTypes[i]);
+                } else {
+                    tile = new Tile(numberTokenTiles[i], terrainTileTypes[i]);
+                }
+
+                TerrainTiles.Add(tile);
+            }
+
+            return TerrainTiles;
         }
     }
 }
