@@ -11,8 +11,7 @@ $(document).ready(function () {
         var appendNumberTokens = function (i, value) {
             var spaceNum = "#space-" + i;
             if (value != 0) {
-                if (value == 2) { $(spaceNum).append('<img src="/Content/Images/Number-Token-2.png" class="space-number-token"/>'); }
-                else {$(spaceNum).append('<img src="/Content/Images/Num-Tile-Placeholder.png" class="space-number-token"/>');}
+                $(spaceNum).append('<img src="/Content/Images/Number-Token-'+value+'.png" class="space-number-token"/>'); 
             }
         }
 
