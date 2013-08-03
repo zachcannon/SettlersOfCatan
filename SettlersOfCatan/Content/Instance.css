@@ -64,23 +64,35 @@ textarea {
 
 /*----------------Settlers_Board_Pieces------------------*/
 
-ul, ol, li, img {
+ul {
     list-style: none outside none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.tile-row {
+    text-align: center;
 }
 
 .board-tile {
- 	width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+ 	width: 18.75%;
  	height: 150px;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
  }
 
-.board-tile img {
-    position: absolute;
+.brick-terrain { background-image: url('/Content/Images/Brick-Tile.png'); }
+.desert-terrain { background-image: url('/Content/Images/Desert-Tile.png'); }
+.ore-terrain { background-image: url('/Content/Images/Ore-Tile.png'); }
+.sheep-terrain { background-image: url('/Content/Images/Sheep-Tile.png'); }
+.wheat-terrain { background-image: url('/Content/Images/Wheat-Tile.png'); }
+.wood-terrain { background-image: url('/Content/Images/Wood-Tile.png'); }
 
-}
-
-.space-number-token {
-    margin-left: 55px;
-    margin-top: 55px;
+.number-token {
+    margin-top:55px;
 }
 
 #board {
@@ -91,30 +103,8 @@ ul, ol, li, img {
     border-radius: 5px;
 }
 
-#board li {
+#board > li {
     height: 18.75%;
-    position: relative;
-}
-
-#board li ul {
-    position: absolute;
-}
-
-#board li ul.three-row {
-    left: 13%;
-}
-
-#board li ul.four-row {
-    left: 3.5%;
-}
-
-#board li ul.five-row {
-    left: -6%;
-}
-
-#board li ul li {
-    float: left;
-    padding: 6px;
 }
 
 #player-info {
@@ -137,7 +127,6 @@ ul, ol, li, img {
     margin-top: 20px;
    
 }
-
 
 .player-odd {
     float: left;
