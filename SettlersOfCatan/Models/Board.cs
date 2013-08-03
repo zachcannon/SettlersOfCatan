@@ -60,7 +60,7 @@ namespace SettlersOfCatan.Models
 
         private List<int> GenerateNumberTokens()
         {
-            List<int> numberTokens = new List<int> { 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 12 };
+            List<int> numberTokens = new List<int> { 5, 2, 6, 10, 9, 4, 3, 8, 11, 5, 8, 4, 3, 6, 10, 11, 12, 9};
             numberTokens.Insert(TerrainTiles.IndexOf("Desert"), 0);
             return numberTokens;
         }

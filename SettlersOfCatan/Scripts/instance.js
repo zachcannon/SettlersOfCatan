@@ -3,21 +3,17 @@
 $(document).ready(function () {
     $(function () {
         var appendTerrain = function (i, value) {
-            var spaceNum = "#space-" + i;
-            var imgLocation = '<img src="/Content/Images/' + value + '-Tile.png" class="board-tile"/>';
-            $(spaceNum).append(imgLocation);
+            $('.board-tile:eq(' + i + ')').addClass(value.toLowerCase() + '-terrain');
         };
 
-        var appendNumberTokens = function (i, value) {
-            var spaceNum = "#space-" + i;
-            if (value != 0) {
-                $(spaceNum).append('<img src="/Content/Images/Number-Token-'+value+'.png" class="space-number-token"/>'); 
-            }
+        var appendNumberToken = function (i, value) {           
+            if (value != 0) $('.board-tile:eq(' + i + ')').html('<img src="/Content/Images/Number-Token-' + value + '.png" class="number-token"/>');
+            
         }
 
         var initializeBoard = function (data) {
             $.each(data.TerrainTiles, appendTerrain);
-            $.each(data.NumberTokens, appendNumberTokens);
+            $.each(data.NumberTokens, appendNumberToken);
         };
 
         $.ajax({
