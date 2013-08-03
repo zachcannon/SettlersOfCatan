@@ -147,6 +147,17 @@
     <Content Include="Content\Images\Brick-Tile.png" />
     <Content Include="Content\Images\Desert-Tile.png" />
     <Content Include="Content\Images\Num-Tile-Placeholder.png" />
+    <Content Include="Content\Images\Number-Token-10.png" />
+    <Content Include="Content\Images\Number-Token-11.png" />
+    <Content Include="Content\Images\Number-Token-12.png" />
+    <Content Include="Content\Images\Number-Token-2.png" />
+    <Content Include="Content\Images\Number-Token-3.png" />
+    <Content Include="Content\Images\Number-Token-4.png" />
+    <Content Include="Content\Images\Number-Token-5.png" />
+    <Content Include="Content\Images\Number-Token-6.png" />
+    <Content Include="Content\Images\Number-Token-7.png" />
+    <Content Include="Content\Images\Number-Token-8.png" />
+    <Content Include="Content\Images\Number-Token-9.png" />
     <Content Include="Content\Images\Ore-Tile.png" />
     <Content Include="Content\Images\Sheep-Tile.png" />
     <Content Include="Content\Images\Water-Tile.png" />
