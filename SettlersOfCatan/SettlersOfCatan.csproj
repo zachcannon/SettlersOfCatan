@@ -145,6 +145,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Background.png" />
     <Content Include="Content\Images\Brick-Tile.png" />
     <Content Include="Content\Images\Desert-Tile.png" />
     <Content Include="Content\Images\Num-Tile-Placeholder.png" />

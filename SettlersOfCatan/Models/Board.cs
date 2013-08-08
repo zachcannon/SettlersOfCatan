@@ -79,14 +79,7 @@ namespace SettlersOfCatan.Models
 
             for (int i = 0; i < terrainTileTypes.Count(); i++)
             {
-                Tile tile;
-                if(i == DesertLocation) {
-                    tile = new Tile(terrainTileTypes[i]);
-                } else {
-                    tile = new Tile(numberTokenTiles[i], terrainTileTypes[i]);
-                }
-
-                TerrainTiles.Add(tile);
+                TerrainTiles.Add(new Tile(numberTokenTiles[i], terrainTileTypes[i]));
             }
 
             return TerrainTiles;

@@ -98,7 +98,8 @@ ul.tile-row {
 #board {
     width: 840px;
     height: 660px;
-    background-color: maroon;
+    background-color: #625ce1;
+    background-image: url('/Content/Images/Background.png');
     float: left;
     border-radius: 5px;
 }

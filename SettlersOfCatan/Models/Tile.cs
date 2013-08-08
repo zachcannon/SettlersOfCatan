@@ -9,20 +9,12 @@ namespace SettlersOfCatan.Models
     {
         public int NumberTokenValue { get; set; }
         public string TerrainType { get; set; }
-        public bool HasNumberToken { get; set; }
+        public bool HasNumberToken { get { return (NumberTokenValue >= 2 && NumberTokenValue <= 12); } }
 
         public Tile(int numberTokenValue, string terrainType)
         {
             this.NumberTokenValue = numberTokenValue;
             this.TerrainType = terrainType;
-            this.HasNumberToken = true;
         }
-
-        public Tile(string terrainType)
-        {
-            this.TerrainType = terrainType;
-            this.HasNumberToken = false;
-        }
-
     }
 }
