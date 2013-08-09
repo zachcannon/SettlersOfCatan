@@ -141,6 +141,22 @@ ul.tile-row {
     float: left;
 }
 
+#roll-die-button {
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#result-of-roll {
+    height: 70px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: lightgray;
+    margin-top: 20px;
+    padding-top: 27px;
+    font-size: 20px;
+    text-align: center;
+}
 
 
 

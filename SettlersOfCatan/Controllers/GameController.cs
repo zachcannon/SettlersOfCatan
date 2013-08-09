@@ -20,6 +20,13 @@ namespace SettlersOfCatan.Controllers
             return Json(board, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult RollDie()
+        {
+            Die die = new Die();
+            die.Roll();
+            return Json(die.LastRollValue, JsonRequestBehavior.AllowGet);
+        }
+        
         public ActionResult Instance()
         {
             return View();

@@ -22,8 +22,16 @@ $(document).ready(function () {
 
     });
 
+    $('#roll-die-button').click(function () {
 
+        var updateLastRoll = function (data) {
+            $('#result-of-roll span').text(data);
+        }
 
+        $.ajax({
+            url: "/Game/RollDie"
+        }).done(updateLastRoll);
+    });
 
 });
 

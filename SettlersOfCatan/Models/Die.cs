@@ -7,12 +7,14 @@ namespace SettlersOfCatan.Models
 {
     public class Die
     {
-        public int DieValue { get; private set; }
+        public int LastRollValue { get; set; }
 
         public void Roll()
         {
-            Random random = new Random();
-            this.DieValue = random.Next(1, 7);
+            Random randomOne = new Random();
+            Random randomTwo = new Random(randomOne.Next());
+            LastRollValue += randomOne.Next(1, 7);
+            LastRollValue += randomTwo.Next(1, 7);
         }
     }
 }
