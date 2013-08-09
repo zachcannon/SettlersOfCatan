@@ -15,19 +15,18 @@ namespace SettlersOfCatan.Models
 
         public int PlayerNumber{ get; set; }
 
-        public Player(int playerNumber)
+        public Player()
         {
-            this.PlayerNumber = playerNumber;
             this.SetResourcesToEmpty();
         }
 
         private void SetResourcesToEmpty()
         {
-            WoodResource = 0;
-            SheepResource = 0;
             BrickResource = 0;
-            OreResource = 0;
-            WheatResource = 0;
+            OreResource = 1;
+            SheepResource = 3;
+            WheatResource = 4;
+            WoodResource = 8;
         }
 
         public void ChangeWoodResource(int wood)

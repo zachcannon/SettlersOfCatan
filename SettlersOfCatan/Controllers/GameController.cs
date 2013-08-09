@@ -26,6 +26,12 @@ namespace SettlersOfCatan.Controllers
             die.Roll();
             return Json(die.LastRollValue, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult GetPlayerInfo()
+        {
+            Player player = new Player();
+            return Json(player, JsonRequestBehavior.AllowGet);
+        }
         
         public ActionResult Instance()
         {

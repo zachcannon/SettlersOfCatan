@@ -22,6 +22,8 @@ $(document).ready(function () {
 
     });
 
+    getPlayerResources();
+
     $('#roll-die-button').click(function () {
 
         var updateLastRoll = function (data) {
@@ -35,3 +37,16 @@ $(document).ready(function () {
 
 });
 
+var getPlayerResources = function () {
+    var updatePlayerBox = function (data) {
+        $('#player-one .resource-display:eq(0)').text('Brick: ' + data.BrickResource);
+        $('#player-one .resource-display:eq(1)').text('Ore: ' + data.OreResource);
+        $('#player-one .resource-display:eq(2)').text('Sheep: ' + data.SheepResource);
+        $('#player-one .resource-display:eq(3)').text('Wheat: ' + data.WheatResource);
+        $('#player-one .resource-display:eq(4)').text('Wood: ' + data.WoodResource);
+    };
+
+    $.ajax({
+        url: "/Game/GetPlayerInfo"
+    }).done(updatePlayerBox);
+};
