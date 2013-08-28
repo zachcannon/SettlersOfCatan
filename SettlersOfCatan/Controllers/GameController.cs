@@ -27,9 +27,27 @@ namespace SettlersOfCatan.Controllers
             return Json(die.LastRollValue, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult GetPlayerInfo()
+        public void CreatePlayers()
         {
-            Player player = new Player();
+            using (var db = new PlayerContext())
+            {
+                Player player1 = new Player(1);
+                Player player2 = new Player(2);
+                Player player3 = new Player(3);
+                Player player4 = new Player(4);
+                db.Players.Add(player1);
+                db.Players.Add(player2);
+                db.Players.Add(player3);
+                db.Players.Add(player4);
+                db.SaveChanges();
+                
+            }
+        }
+
+        public ActionResult GetPlayerResources(int input)
+        {
+
+            Player player = new Player(input);
             return Json(player, JsonRequestBehavior.AllowGet);
         }
         

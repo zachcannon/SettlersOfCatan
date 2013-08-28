@@ -22,7 +22,8 @@ $(document).ready(function () {
 
     });
 
-    getPlayerResources();
+    createPlayers();
+    getPlayerResources(2);
 
     $('#roll-die-button').click(function () {
 
@@ -37,7 +38,13 @@ $(document).ready(function () {
 
 });
 
-var getPlayerResources = function () {
+var createPlayers = function (playerId) {
+    $.ajax({
+        url: "/Game/CreatePlayers"
+    });
+};
+
+var getPlayerResources = function (playerNum) {
     var updatePlayerBox = function (data) {
         $('#player-one .resource-display:eq(0)').text('Brick: ' + data.BrickResource);
         $('#player-one .resource-display:eq(1)').text('Ore: ' + data.OreResource);
@@ -47,6 +54,7 @@ var getPlayerResources = function () {
     };
 
     $.ajax({
-        url: "/Game/GetPlayerInfo"
+        url: "/Game/GetPlayerResources",
+        data: {"input": playerNum}
     }).done(updatePlayerBox);
 };

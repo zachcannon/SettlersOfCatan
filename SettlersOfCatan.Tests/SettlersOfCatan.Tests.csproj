@@ -109,9 +109,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SettlersOfCatan\SettlersOfCatan.csproj">
+    <ProjectReference Include="..\SettlersOfCatan\Presentation.csproj">
       <Project>{23C05B02-300A-48FF-A581-D47EAE726977}</Project>
-      <Name>SettlersOfCatan</Name>
+      <Name>Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
