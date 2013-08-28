@@ -271,6 +271,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SettlersOfCatan.Business\SettlersOfCatan.Business.csproj">
+      <Project>{5b1a79d8-266e-4c99-8984-0aa8464f4d33}</Project>
+      <Name>SettlersOfCatan.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SettlersOfCatan.Service\SettlersOfCatan.Service.csproj">
+      <Project>{8ec16052-f4c9-4ae4-8ab2-6ff9e90d581f}</Project>
+      <Name>SettlersOfCatan.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
