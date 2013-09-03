@@ -13,11 +13,11 @@ namespace SettlersOfCatan.Data{
 
         public DbSet<PlayerData> ListOfPlayers { get; set; }
 
-        public void SetPlayer(Data.PlayerData player)
+        public void SetPlayer(Data.PlayerData playerData)
         {
             var db = new GameContext();
 
-            db.ListOfPlayers.Add(player);
+            db.ListOfPlayers.Add(playerData);
             db.SaveChanges();
         }
     }
