@@ -141,11 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Board.cs" />
-    <Compile Include="Models\Die.cs" />
-    <Compile Include="Models\Player.cs" />
-    <Compile Include="Models\PlayerContext.cs" />
-    <Compile Include="Models\Tile.cs" />
+    <Compile Include="Models\BoardModel.cs" />
+    <Compile Include="Models\DieModel.cs" />
+    <Compile Include="Models\TileModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

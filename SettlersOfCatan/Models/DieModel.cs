@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SettlersOfCatan.Models
 {
-    public class Die
+    public class DieModel
     {
         public int LastRollValue { get; set; }
 

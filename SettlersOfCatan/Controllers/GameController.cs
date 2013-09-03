@@ -1,4 +1,6 @@
 ﻿using SettlersOfCatan.Models;
+using SettlersOfCatan.Business;
+using SettlersOfCatan.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,38 +18,29 @@ namespace SettlersOfCatan.Controllers
 
         public ActionResult CreateBoard()
         {
-            Board board = new Board();
+            BoardModel board = new BoardModel();
             return Json(board, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult RollDie()
         {
-            Die die = new Die();
+            DieModel die = new DieModel();
             die.Roll();
             return Json(die.LastRollValue, JsonRequestBehavior.AllowGet);
         }
 
         public void CreatePlayers()
         {
-            using (var db = new PlayerContext())
-            {
-                Player player1 = new Player(1);
-                Player player2 = new Player(2);
-                Player player3 = new Player(3);
-                Player player4 = new Player(4);
-                db.Players.Add(player1);
-                db.Players.Add(player2);
-                db.Players.Add(player3);
-                db.Players.Add(player4);
-                db.SaveChanges();
-                
-            }
+            Service.GameService service = new Service.GameService();
+            service.AddNewPlayerToDB(1);
+            service.AddNewPlayerToDB(2);
+            service.AddNewPlayerToDB(3);
+            service.AddNewPlayerToDB(4);
         }
 
         public ActionResult GetPlayerResources(int input)
         {
-
-            Player player = new Player(input);
+            Business.Player player = new Business.Player(input);
             return Json(player, JsonRequestBehavior.AllowGet);
         }
         

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SettlersOfCatan.Models
 {
-    public class Board
+    public class BoardModel
     {
         enum Terrains
         {
@@ -19,9 +19,9 @@ namespace SettlersOfCatan.Models
 
         public int DesertLocation { get; set; }
 
-        public List<Tile> TerrainTiles { get; private set; }
+        public List<TileModel> TerrainTiles { get; private set; }
 
-        public Board()
+        public BoardModel()
         {
             List<String> TerrainTileTypes = GenerateTerrainTileTypes();
             FindDesertLocation(TerrainTileTypes);
@@ -73,13 +73,13 @@ namespace SettlersOfCatan.Models
             return numberTokenTiles;
         }
 
-        private List<Tile> GenerateBoard(List<String> terrainTileTypes, List<int> numberTokenTiles)
+        private List<TileModel> GenerateBoard(List<String> terrainTileTypes, List<int> numberTokenTiles)
         {
-            List<Tile> TerrainTiles = new List<Tile>();
+            List<TileModel> TerrainTiles = new List<TileModel>();
 
             for (int i = 0; i < terrainTileTypes.Count(); i++)
             {
-                TerrainTiles.Add(new Tile(numberTokenTiles[i], terrainTileTypes[i]));
+                TerrainTiles.Add(new TileModel(numberTokenTiles[i], terrainTileTypes[i]));
             }
 
             return TerrainTiles;
