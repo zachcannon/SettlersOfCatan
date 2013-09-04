@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     createPlayers();
-    getPlayerResources(2);
+    //getPlayerResources(2);
 
     $('#roll-die-button').click(function () {
 

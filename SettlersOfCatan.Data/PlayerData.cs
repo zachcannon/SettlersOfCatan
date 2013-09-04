@@ -14,11 +14,13 @@ namespace SettlersOfCatan.Data
         public int WheatResource { get; private set; }
         public int WoodResource { get; private set; }
 
-        public int id { get; private set; }
+        public int Id { get; private set; }
+
+        public PlayerData() { }
 
         public PlayerData(int playerID, int brickResource, int oreResource, int sheepResource, int wheatResource, int woodResource)
         {
-            this.id = playerID;
+            this.Id = playerID;
             this.BrickResource = brickResource;
             this.OreResource = oreResource;
             this.SheepResource = sheepResource;

@@ -13,12 +13,22 @@ namespace SettlersOfCatan.Data{
 
         public DbSet<PlayerData> ListOfPlayers { get; set; }
 
-        public void SetPlayer(Data.PlayerData playerData)
+        public void SetPlayer(Data.PlayerData newPlayerData)
         {
             var db = new GameContext();
 
-            db.ListOfPlayers.Add(playerData);
-            db.SaveChanges();
+            var player = db.ListOfPlayers.Find(newPlayerData.Id);
+
+            if (player == null)
+            {
+                db.ListOfPlayers.Add(newPlayerData);
+                db.SaveChanges();
+            }
+            else
+            {
+                db.Entry(player).CurrentValues.SetValues(newPlayerData);
+                db.SaveChanges();
+            }            
         }
     }
 }
