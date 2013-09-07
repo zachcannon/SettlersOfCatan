@@ -22,8 +22,13 @@ $(document).ready(function () {
 
     });
 
-    createPlayers();
-    //getPlayerResources(2);
+
+    $(function () {
+        $.ajax({
+            url: "/Game/CreatePlayers"
+        }).done(updatePlayersResources);
+    });
+    
 
     $('#roll-die-button').click(function () {
 
@@ -44,17 +49,20 @@ var createPlayers = function (playerId) {
     });
 };
 
-var getPlayerResources = function (playerNum) {
+var updatePlayersResources = function () {
     var updatePlayerBox = function (data) {
-        $('#player-one .resource-display:eq(0)').text('Brick: ' + data.BrickResource);
-        $('#player-one .resource-display:eq(1)').text('Ore: ' + data.OreResource);
-        $('#player-one .resource-display:eq(2)').text('Sheep: ' + data.SheepResource);
-        $('#player-one .resource-display:eq(3)').text('Wheat: ' + data.WheatResource);
-        $('#player-one .resource-display:eq(4)').text('Wood: ' + data.WoodResource);
+        $('#player-' + data.PlayerId + ' .resource-display:eq(0)').text('Brick: ' + data.BrickResource);
+        $('#player-' + data.PlayerId + ' .resource-display:eq(1)').text('Ore: ' + data.OreResource);
+        $('#player-' + data.PlayerId + ' .resource-display:eq(2)').text('Sheep: ' + data.SheepResource);
+        $('#player-' + data.PlayerId + ' .resource-display:eq(3)').text('Wheat: ' + data.WheatResource);
+        $('#player-' + data.PlayerId + ' .resource-display:eq(4)').text('Wood: ' + data.WoodResource);
     };
 
-    $.ajax({
-        url: "/Game/GetPlayerResources",
-        data: {"input": playerNum}
-    }).done(updatePlayerBox);
+
+    for (var playerNum = 1; playerNum <= 4; playerNum++) {
+        $.ajax({
+            url: "/Game/GetPlayerResources",
+            data: { "input": playerNum }
+        }).done(updatePlayerBox);
+    }
 };

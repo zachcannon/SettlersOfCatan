@@ -20,8 +20,8 @@ namespace SettlersOfCatan.Business
         {
             this.PlayerId = playerID;
         }
-         
-        public Player(int playerID, int woodResource, int sheepResource, int oreResource, int brickResource, int wheatResource) 
+
+        public Player(int playerID, int brickResource, int oreResource, int sheepResource, int wheatResource, int woodResource) 
         {
             this.PlayerId = playerID;
             this.BrickResource = brickResource;

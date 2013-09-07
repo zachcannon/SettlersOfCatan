@@ -20,6 +20,14 @@ namespace SettlersOfCatan.Service
 
             Data.GameContext context = new Data.GameContext();
             context.SetPlayer(player);
-        }    
+        }
+
+        public Business.Player GetPlayerFromDB(int playerId)
+        {
+            Data.GameContext context = new Data.GameContext();
+            Data.PlayerData playerData = context.GetPlayerData(playerId);
+            return (new Business.Player(playerData.Id, playerData.BrickResource ,playerData.OreResource ,playerData.SheepResource ,playerData.WheatResource ,playerData.WoodResource));
+        }
+
     }
 }

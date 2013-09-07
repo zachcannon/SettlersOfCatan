@@ -30,5 +30,14 @@ namespace SettlersOfCatan.Data{
                 db.SaveChanges();
             }            
         }
+
+        public Data.PlayerData GetPlayerData(int playerId)
+        {
+            var db = new GameContext();
+
+            var player = db.ListOfPlayers.Find(playerId);
+
+            return player;
+        }
     }
 }

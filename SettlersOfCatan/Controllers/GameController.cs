@@ -40,7 +40,8 @@ namespace SettlersOfCatan.Controllers
 
         public ActionResult GetPlayerResources(int input)
         {
-            Business.Player player = new Business.Player(input);
+            Service.GameService service = new Service.GameService();
+            Business.Player player = service.GetPlayerFromDB(input);
             return Json(player, JsonRequestBehavior.AllowGet);
         }
         
